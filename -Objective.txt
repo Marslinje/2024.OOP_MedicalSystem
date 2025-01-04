@@ -1,0 +1,92 @@
+Programação Orientada a Objetos – Atividade de Recuperação do RA1
+Prof. Alcides Calsavara
+
+Considere uma aplicação que gerencia dados sobre médicos, pacientes e consulas,
+sendo que:
+
+
+1. Cada médico possui os seguintes dados:
+a. Nome (string)
+b. Código (valor inteiro): número único de identificação do médico
+c. Lista de pacientes
+
+2. Cada paciente possui os seguintes dados:
+a. Nome (string)
+b. CPF (número de 9 dígitos mais 2 dígitos de controle)
+c. Lista de consultas
+
+3. Cada consulta possui os seguintes dados:
+a. Data
+b. Horário
+c. Referência para um médico
+
+------------------------------------------------------------------------------------------------------------------------
+
+A aplicação tem uma interface que permite a realização das seguintes pesquisas:
+
+1. Quais são todos os pacientes de um determinado médico? OK
+
+2. Quais são todas as consultas agendadas para um determinado médico em
+determinado período (definido por uma data inicial e uma data final), na ordem
+crescente dos horários? (O período pode cobrir tanto o tempo passado como o
+tempo futuro.) OK
+
+3. Quais são todos os médicos que um determinado paciente já consultou ou tem
+consulta agendada? OK
+
+4. Quais são todas as consultas que um determinado paciente realizou com
+determinado médico? (Somente consultas realizadas em um tempo passado são
+consideradas.) OK
+
+5. Quais são todas as consultas agendadas que um determinado paciente possui?
+(Somente consultas agendadas para um tempo posterior ao momento atual são
+consideradas.) OK
+
+6. Quais são os pacientes de um determinado médico que não o consulta há mais
+que um determinado tempo (em meses)?
+
+------------------------------------------------------------------------------------------------------------------------
+
+Implemente a aplicação usando a linguagem Java e de acordo com o paradigma de
+orientação a objetos, tal que haja uma classe para representar os médicos, outra para
+represenar os pacientes e outra para representar as consultas, conforme definido acima.
+
+Além disso, a aplicação deverá ter uma ou mais classes para fazer a interface humano-
+computador via console que permita ao usuário a realização das pesquisas listadas
+acima.
+
+------------------------------------------------------------------------------------------------------------------------
+
+Os dados referentes aos objetos das classes que representam médicos, pacientes e
+consultas deverão ser lidos de arquivos no formato csv (comma separated values). Os
+seguintes arquivos deverão existir:
+
+1. Um arquivo com dados sobre médicos: somente o nome e o código de cada
+médico. Pode haver qualquer quantidade de médicos.
+
+2. Um arquivo com dados sobre pacientes: somente o nome e o CPF de cada
+paciente. Pode haver qualquer quantidade de pacientes.
+
+3. Um arquivo com dados sobre consultas: data, horário, código do médico e CPF do
+paciente em cada consulta. Pode haver qualquer quantidade de consultas.
+O resultado de uma pesquisa pode ser exibido diretamente na tela do computador, como
+também pode ser escrito em um arquivo texto, à escolha do usuário. Se a opção for por
+escrever o resultado em arquivo, o usuário deve informar o nome do arquivo a ser gerado.
+
+------------------------------------------------------------------------------------------------------------------------
+
+O desenvolvimento desta atividade inclui a pesquisa e o estudo dos seguintes tópicos de
+programação:
+
+I. Leitura de dados de arquivo csv e escrita de dados em arquivo texto: classes File
+(pacote java.io), Scanner (pacote java.util) e String (pacote java.lang).
+Material de apoio: disponível no Canvas, módulo “Material Extra”
+
+II. Representação de data e horário, incluindo operações de comparação: classes do
+pacote java.time (LocalDate, LocalTime e LocalDateTime).
+Material de apoio:
+
+1. https://docs.oracle.com/javase%2Ftutorial%2F/datetime/overview/packag
+es.html
+2. https://www.w3schools.com/java/java_date.asp
+3. https://www.javatpoint.com/java-date
